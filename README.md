@@ -49,240 +49,76 @@ This platform implements a **Data Mesh + Medallion + Real-Time + AI architecture
 - **Governance:** Data contracts, validation, and observability
 - **DevOps:** CI/CD pipelines using GitHub integration
 
----
-### Data Sources
-This platform is built using publicly available datasets from Kaggle and synthetic generated data to simulate real enterprise operations.
-
-
-Core datasets include:
-
-- Olist E-commerce Dataset (Commerce Domain)
-  - Source: Kaggle – Brazilian E-Commerce Public Dataset by Olist
-  - Provides orders, customers, products, payments, and reviews.
-
-- LoggiBUD Delivery Dataset (Delivery Domain)
-  - Source: Kaggle – Loggi Benchmark for Urban Deliveries (LoggiBUD)
-  - Provides delivery routes, drivers, and logistics performance data.
 
 ---
 
 ---
 
-## Architecture Diagram
-```mermaid
-flowchart TB
+## 🏗️ Enterprise Architecture
 
-%% =========================
-%% USERS / CONSUMERS
-%% =========================
-subgraph Users["👥 Consumers"]
-    CustomerApp["Customer App"]
-    OpsTeam["Operations Team"]
-    BIUsers["Business Intelligence Users"]
-    AIUsers["AI Agents / Copilot"]
-end
+➡️ [View Full Architecture](./docs/01-enterprise-architecture/README.md)
 
-%% =========================
-%% DATA MESH LAYER
-%% =========================
-subgraph Mesh["🏢 Data Mesh Layer (Domain-Owned Data Products)"]
-
-    Commerce["Commerce Domain\n(Olist Orders)"]
-    Delivery["Delivery Domain\n(Loggi + GPS Streaming)"]
-    Customer["Customer 360 Domain"]
-    Marketing["Marketing Domain"]
-    AIDomain["AI Data Products Domain"]
-end
-
-%% =========================
-%% INGESTION / PROCESSING
-%% =========================
-subgraph Fabric["🧱 Microsoft Fabric Data Platform"]
-
-    Ingestion["Data Pipelines"]
-    Lakehouse["Lakehouse\nBronze / Silver / Gold"]
-    Warehouse["Fabric Warehouse"]
-    Notebooks["PySpark Notebooks"]
-end
-
-%% =========================
-%% REAL-TIME LAYER
-%% =========================
-subgraph Realtime["⚡ Real-Time Analytics"]
-
-    Eventstream["Eventstream\n(GPS + Orders Events)"]
-    KQL["KQL Database"]
-    RealtimeViews["Real-Time Semantic Views"]
-end
-
-%% =========================
-%% SEMANTIC LAYER
-%% =========================
-subgraph Semantic["📊 Semantic Layer"]
-
-    Metrics["Certified Metrics Layer\n(Revenue, Orders, ETA, SLA)"]
-    PowerBI["Power BI Models\n(Direct Lake)"]
-end
-
-%% =========================
-%% AI LAYER
-%% =========================
-subgraph AI["🤖 AI & Agent Layer"]
-
-    Agents["AI Agents\n(Customer / Delivery Assistant)"]
-    RAG["RAG Pipeline"]
-    VectorDB["Vector Search Index"]
-    OpenAI["Azure OpenAI"]
-end
-
-%% =========================
-%% GOVERNANCE / DEVOPS
-%% =========================
-subgraph Platform["🚀 Governance & DevOps"]
-
-    GitHub["GitHub Repo"]
-    CI["CI/CD Pipelines"]
-    Envs["DEV / TEST / PROD"]
-    Contracts["Data Contracts"]
-    Observability["Data Observability"]
-end
-
-%% =========================
-%% DATA MESH FLOWS
-%% =========================
-Commerce --> Ingestion
-Delivery --> Eventstream
-Customer --> Lakehouse
-Marketing --> Lakehouse
-AIDomain --> VectorDB
-
-%% =========================
-%% FABRIC FLOWS
-%% =========================
-Ingestion --> Lakehouse
-Lakehouse --> Warehouse
-Notebooks --> Lakehouse
-
-%% =========================
-%% REAL-TIME FLOWS
-%% =========================
-Eventstream --> KQL
-KQL --> RealtimeViews
-RealtimeViews --> PowerBI
-
-%% =========================
-%% SEMANTIC FLOWS
-%% =========================
-Warehouse --> Metrics
-Lakehouse --> Metrics
-Metrics --> PowerBI
-
-%% =========================
-%% AI FLOWS
-%% =========================
-Lakehouse --> RAG
-VectorDB --> RAG
-RAG --> OpenAI
-OpenAI --> Agents
-Metrics --> Agents
-RealtimeViews --> Agents
-
-%% =========================
-%% CONSUMPTION LAYER
-%% =========================
-PowerBI --> BIUsers
-Agents --> AIUsers
-Agents --> CustomerApp
-PowerBI --> OpsTeam
-
-%% =========================
-%% DEVOPS FLOWS
-%% =========================
-GitHub --> CI
-CI --> Envs
-
-Contracts --> Ingestion
-Observability --> Lakehouse
-Observability --> Eventstream
-
-```
 ---
+## 🧭 Explore the Platform
 
-## Technology Stack
+### 📊 Data Platform (Foundation Layer)
+Ingestion, transformation, and Lakehouse architecture.
 
-### Microsoft Fabric
-- Lakehouse
-- Data Pipelines
-- Notebooks (PySpark)
-- Warehouse
-- Eventstream
-- KQL Database
-- Power BI
-
-### AI & GenAI
-- Azure OpenAI
-- Fabric Data Agents
-- RAG (Retrieval-Augmented Generation)
-- Vector Search
-
-### Data Engineering
-- PySpark
-- SQL Analytics
-- Delta Lake
-
-### DevOps
-- GitHub
-- CI/CD Pipelines
-- Deployment Environments (Dev / Test / Prod)
-
-### Governance
-- Data Contracts
-- Schema Validation
-- Data Quality Monitoring
-- Observability Framework
+➡️ [Data Platform](./docs/02-data-platform/README.md)
 
 ---
 
-## Key Capabilities
+### ⚡ Real-Time Analytics
+Streaming data, Eventstream, and live operational insights.
 
-### 🔹 Data Engineering
-- Batch ingestion using Medallion architecture
-- Scalable Lakehouse design
-- Data transformations using PySpark
-
-### 🔹 Real-Time Analytics
-- Live GPS tracking simulation
-- Event-driven architecture using Eventstream
-- KQL-based real-time queries
-
-### 🔹 Analytics & BI
-- Semantic model with certified KPIs
-- Direct Lake Power BI integration
-- Role-based access control (RLS / OLS)
-
-### 🔹 AI Agents
-- Natural language query over enterprise data
-- Delivery ETA prediction
-- Context-aware customer support assistant
-
-### 🔹 Data Mesh
-- Domain-based ownership
-- Data products per business domain
-- Federated governance model
-
-### 🔹 Data Governance
-- Data contracts enforcement
-- Schema drift detection
-- Data quality monitoring and alerts
-
-### 🔹 DevOps
-- CI/CD pipelines across environments
-- Version-controlled data assets
-- Automated deployment workflows
+➡️ [Real-Time Analytics](./docs/04-real-time-analytics/README.md)
 
 ---
 
-## Project Structure
+### 📈 Analytics & BI
+Semantic models, KPIs, and Power BI dashboards.
+
+➡️ [Analytics & BI](./docs/03-analytics-platform/README.md)
+
+---
+
+### 🤖 AI Platform
+AI agents, RAG pipelines, and natural language querying.
+
+➡️ [AI Agents Platform](./docs/05-ai-agents-platform/README.md)
+
+---
+
+### 🔐 Data Governance
+Data contracts, validation rules, and observability.
+
+➡️ [Governance Layer](./docs/06-data-contracts-observability/README.md)
+
+---
+
+### 🧠 Semantic Layer
+Certified metrics and unified business definitions.
+
+➡️ [Semantic Layer](./docs/07-semantic-layer/README.md)
+
+---
+
+### 🚀 DevOps & CI/CD
+Deployment pipelines and environment management.
+
+➡️ [DevOps Strategy](./docs/08-devops-cicd/README.md)
+
+---
+
+## 📊 Data Sources
+
+This project uses public datasets and synthetic data to simulate real enterprise workloads.
+
+➡️ [View Dataset Catalog](./datasets/README.md)
+
+---
+
+## 📁 Project Structure
 
 ```bash
 enterprise-data-ai-platform/
@@ -320,13 +156,19 @@ This project is structured as a modular enterprise platform.
 - Data ingestion and Medallion architecture
 - Lakehouse and transformation pipelines
 
+➡️ [Data Engineering Layer](./docs/02-data-platform/README.md)
+
 ### 📈 Analytics & BI
 - Semantic models and KPI definitions
 - Power BI dashboards with Direct Lake
 
+➡️ [Analytics & Semantic Models](./docs/03-analytics-platform/README.md)
+
 ### ⚡ Real-Time Analytics
 - Live fleet tracking system
 - Event-driven delivery monitoring
+
+➡️ [Streaming & Event Processing](./docs/04-real-time-analytics/README.md)
 
 ### 🤖 AI Platform
 - Intelligent delivery assistant
@@ -336,13 +178,19 @@ This project is structured as a modular enterprise platform.
 - Data contracts enforcement
 - Observability and monitoring framework
 
+➡️ [Data Contracts & Observability](./docs/06-data-contracts-observability/README.md)
+
 ### 🧠 Semantic Layer
 - Certified business metrics
 - Single source of truth across all consumers
 
+➡️ [Business Metrics Layer](./docs/07-semantic-layer/README.md)
+
 ### 🚀 DevOps
 - CI/CD pipelines
 - Multi-environment deployment strategy
+
+➡️ [Deployment & CI/CD Strategy](./docs/08-devops-cicd/README.md)
 
 ---
 
@@ -357,3 +205,21 @@ This project is designed as a **production-grade reference architecture**, showc
 - DevOps
 
 into a single **AI-native data platform built on Microsoft Fabric**.
+
+---
+
+
+## 👤 About the Author
+
+This solution was designed and developed by:
+
+**Lorena L. Mairano**  
+Data & AI Engineer specializing in modern cloud data platforms.
+
+Focus areas:
+- Microsoft Fabric & Lakehouse Architecture  
+- Real-Time Data Systems  
+- AI Agents & RAG Architectures  
+- Data Mesh & Governance  
+
+This repository is part of a professional portfolio demonstrating end-to-end enterprise data platform design.

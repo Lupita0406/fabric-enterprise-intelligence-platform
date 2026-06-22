@@ -1,59 +1,101 @@
-# 📊 Data Sources Catalog
+# 📊 Data Products Catalog
 
-This project uses publicly available datasets and synthetic data to simulate an enterprise-scale data ecosystem.
+This folder contains the **data foundations** used to simulate an enterprise-scale Data & AI platform on Microsoft Fabric.
+
+These datasets represent **domain-aligned data products** used across batch, streaming, analytics, and AI workloads.
 
 ---
 
-## 🟡 Commerce Domain Dataset
+# 🏢 Domain Data Products
+
+## 🟡 Commerce Domain
 
 ### Olist E-commerce Dataset
+Source: Kaggle – Brazilian E-Commerce Public Dataset
 
-Source: Kaggle – Brazilian E-Commerce Public Dataset by Olist  
-:contentReference[oaicite:0]{index=0}
+Represents the core **Commerce data product**:
 
-Used for:
 - Orders
 - Customers
 - Products
 - Payments
 - Reviews
 
-Supports:
-- Medallion architecture
-- Semantic models
-- BI dashboards
-- AI agents (customer context)
+Used across:
+
+- Data Platform (Medallion architecture)
+- Analytics (KPI & semantic models)
+- AI Agents (customer context)
 
 ---
 
-## 🟣 Delivery Domain Dataset
+## 🟣 Delivery Domain
 
-### LoggiBUD Delivery Dataset
+### Loggi Delivery Dataset
+Source: Kaggle – Logistics / Urban Delivery Benchmark
 
-Source: Kaggle – Loggi Benchmark for Urban Deliveries  
-:contentReference[oaicite:1]{index=1}
+Represents the **Delivery & Logistics data product**:
 
-Used for:
-- Fleet tracking
+- Fleet operations
 - Delivery routes
-- Logistics performance
-- ETA estimation
+- Operational performance
+- Delivery status lifecycle
 
-Supports:
-- Real-time analytics (KQL)
-- Eventstream ingestion
-- Operations dashboards
-- AI delivery assistant
+Used across:
+
+- Real-Time Analytics (Eventstream + KQL)
+- Operational dashboards
+- ETA prediction models
+- AI delivery reasoning
 
 ---
 
-## 🟢 Synthetic Streaming Data
+## 🟢 Streaming / Synthetic Data
 
-Generated internally using Python simulation.
+### Simulated Event Data (Python-generated)
 
-Used for:
-- Real-time GPS tracking
-- Event-driven architecture
-- Streaming ingestion (Eventstream → KQL)
+Represents **real-time operational events**:
+
+- GPS tracking
+- Order status updates
+- Delivery events
+- System telemetry
+
+Used across:
+
+- Real-Time Analytics layer
+- Event-driven architecture (Eventstream → KQL)
+- AI agents real-time context
 - Live dashboards
-- AI agent reasoning
+
+---
+
+# 🧠 Role in Architecture
+
+These datasets act as **simulated enterprise data products** aligned with Data Mesh principles.
+
+They are consumed by:
+
+- 🧱 Data Platform (ingestion + transformation)
+- 📊 Analytics Layer (BI + KPIs)
+- ⚡ Real-Time Layer (streaming processing)
+- 🤖 AI Agents (context + reasoning)
+
+---
+
+# 🎯 Purpose
+
+This dataset layer enables:
+
+- End-to-end pipeline simulation
+- Multi-domain architecture modeling
+- Batch + real-time hybrid processing
+- AI-ready structured data foundation
+
+---
+
+# 🚀 Summary
+
+This folder represents the **data foundation layer** of the platform:
+
+> Structured, domain-aligned, and AI-ready enterprise data products.

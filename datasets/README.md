@@ -11,7 +11,7 @@ These datasets represent **domain-aligned data products** used across batch, str
 ## 🟡 Commerce Domain
 
 ### Olist E-commerce Dataset
-Source: Kaggle – Brazilian E-Commerce Public Dataset
+Source: Kaggle – Brazilian E-Commerce Public Dataset by Olist
 
 Represents the core **Commerce data product**:
 
@@ -29,26 +29,7 @@ Used across:
 
 ---
 
-## 🟣 Delivery Domain
 
-### Loggi Delivery Dataset
-Source: Kaggle – Logistics / Urban Delivery Benchmark
-
-Represents the **Delivery & Logistics data product**:
-
-- Fleet operations
-- Delivery routes
-- Operational performance
-- Delivery status lifecycle
-
-Used across:
-
-- Real-Time Analytics (Eventstream + KQL)
-- Operational dashboards
-- ETA prediction models
-- AI delivery reasoning
-
----
 
 ## 🟢 Streaming / Synthetic Data
 

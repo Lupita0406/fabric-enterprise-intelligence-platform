@@ -258,3 +258,21 @@ The Governance & Security layer guarantees:
 This layer ensures the platform is not only:
 
 > **intelligent and scalable — but also secure, compliant, and enterprise-ready**
+
+
+# ⚠️ Implementation Notes
+
+This project was developed using a Microsoft Fabric trial environment with limited administrative permissions.
+
+Some Microsoft Fabric governance capabilities, such as **Domains**, were not available for configuration due to tenant-level restrictions.
+
+To preserve the architectural intent, the domain-oriented design has been implemented through:
+
+- Workspace organization
+- Repository structure
+- Domain-specific documentation
+- Data Products definition
+- Semantic models
+- Governance documentation
+
+Although the Domains feature could not be configured in the Fabric portal, the solution follows Data Mesh principles by assigning ownership, responsibilities, and data products to each business domain.

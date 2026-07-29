@@ -223,3 +223,10 @@ Focus areas:
 - Data Mesh & Governance  
 
 This repository is part of a professional portfolio demonstrating end-to-end enterprise data platform design.
+
+
+## ⚠️ Implementation Notes
+
+Some Microsoft Fabric capabilities depend on tenant-level administrative permissions.
+
+Where platform restrictions prevented the implementation of specific features (such as Microsoft Fabric Domains), the project documents the intended architecture and provides an equivalent implementation using repository structure, workspace organization, and governance artifacts.

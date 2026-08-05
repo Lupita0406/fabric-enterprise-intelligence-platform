@@ -1,21 +1,33 @@
 # 🏗️ Enterprise Architecture
 
-This document describes the end-to-end architecture of the **Enterprise Data & AI Platform on Microsoft Fabric**, including data flows, domain design, real-time processing, AI integration, and governance.
+This document describes the end-to-end architecture of the **Enterprise Data, AI & Decision Intelligence Platform on Microsoft Fabric**.
+
+The architecture integrates modern data engineering, real-time analytics, artificial intelligence, governance, enterprise planning, and DevOps into a single governed platform following Microsoft Fabric best practices.
+
+---
+
+# 🎯 Architecture Vision
+
+The platform is designed following modern enterprise architecture principles where trusted data becomes a strategic asset for analytics, artificial intelligence, and business planning.
+
+Rather than implementing isolated technologies, the solution combines domain-oriented ownership, governed data products, semantic models, real-time analytics, AI Agents, and Decision Intelligence into a unified Microsoft Fabric ecosystem.
 
 ---
 
 # 🧭 1. Architecture Overview
 
-The platform is designed as a unified **Data Mesh + Medallion + Real-Time + AI architecture**.
+The platform is designed as a unified enterprise architecture combining:
 
-It integrates:
-
-- Domain-oriented data ownership (Data Mesh)
-- Lakehouse-based data processing (Medallion)
-- Real-time streaming analytics
-- Semantic business layer
-- AI agents powered by enterprise data
-- End-to-end governance and DevOps
+- Data Mesh
+- Medallion Architecture
+- Lakehouse Architecture
+- Real-Time Analytics
+- Semantic Modeling
+- Artificial Intelligence
+- Decision Intelligence
+- Enterprise Planning (Fabric IQ Ready)
+- Enterprise Governance
+- DevOps & CI/CD
 
 ---
 
@@ -43,7 +55,6 @@ subgraph Mesh["🏢 Data Mesh Layer (Domain-Owned Data Products)"]
     Commerce["Commerce Domain\n(Olist Orders)"]
     Delivery["Delivery Domain\n(Loggi + GPS Streaming)"]
     Customer["Customer 360 Domain"]
-    Marketing["Marketing Domain"]
     AIDomain["AI Data Products Domain"]
 end
 
@@ -170,126 +181,197 @@ Domain-oriented architecture where each business unit owns its data products:
 - Commerce (orders, payments, customers)
 - Delivery (fleet, routes, tracking)
 - Customer (360 view)
-- Marketing (campaigns, analytics)
-- AI Data Products (embeddings, features)
+- AI Plastform (embeddings, features)
 
 ---
 
-### 🧱 Data Platform (Microsoft Fabric)
+## 🧱 Data Platform (Microsoft Fabric)
 
-Core processing engine of the system:
+The core enterprise data platform responsible for ingesting, storing, transforming, and serving enterprise data.
 
-- Data ingestion via pipelines  
-- Lakehouse storage (Bronze / Silver / Gold)  
-- Data Warehouse for structured analytics  
-- PySpark transformations  
+Main capabilities:
 
----
-
-### ⚡ Real-Time Layer
-
-Handles live operational data:
-
-- Eventstream ingestion (GPS, orders)  
-- KQL database for streaming queries  
-- Real-time views for operational dashboards  
+- Data Pipelines
+- OneLake
+- Lakehouse
+- Bronze / Silver / Gold architecture
+- Fabric Warehouse
+- PySpark Notebooks
+- Delta Lake
 
 ---
 
-### 📊 Semantic Layer
+## ⚡ Real-Time Analytics Layer
 
-Business-friendly abstraction layer:
+Provides operational intelligence through event-driven architectures.
 
-- Certified KPIs (Revenue, ETA, SLA)  
-- Single source of truth  
-- Power BI Direct Lake models  
+Capabilities include:
 
----
-
-### 🤖 AI Layer
-
-Intelligent reasoning layer:
-
-- RAG pipeline over enterprise data  
-- Vector search index  
-- Azure OpenAI for reasoning  
-- AI agents for operations and customer interaction  
+- Eventstream
+- KQL Database
+- Live GPS events
+- Streaming analytics
+- Operational dashboards
+- Real-time monitoring
 
 ---
 
-### 🚀 Governance & DevOps
+## 📊 Semantic Layer
 
-Enterprise control layer:
+Business abstraction layer providing consistent business definitions across all consumers.
 
-- Data contracts per domain  
-- CI/CD pipelines (GitHub integration)  
-- Multi-environment deployment (Dev/Test/Prod)  
-- Observability and data quality monitoring  
+Capabilities:
 
----
-
-## 🧰 4. Technology Stack
-
-### 🧱 Microsoft Fabric
-- Lakehouse  
-- Data Pipelines  
-- Warehouse  
-- Eventstream  
-- KQL Database  
-- Power BI  
+- Certified KPIs
+- Semantic Models
+- Direct Lake
+- DirectQuery
+- Shared Business Metrics
+- Single Version of the Truth
 
 ---
 
-### 🤖 AI & GenAI
-- Azure OpenAI  
-- RAG architecture  
-- Vector Search  
-- AI Agents  
+## 🤖 AI & Decision Intelligence Layer
+
+This layer enables intelligent interaction with enterprise data through AI agents, Retrieval-Augmented Generation (RAG), and Azure OpenAI.
+
+Beyond conversational AI, it supports decision intelligence by combining semantic models, trusted enterprise data, and real-time operational events.
+
+Capabilities include:
+
+- Azure OpenAI
+- Fabric Data Agents
+- AI Agents
+- RAG Pipelines
+- Vector Search
+- Natural Language Analytics
+- Decision Support
 
 ---
 
-### ⚙️ Data Engineering
-- PySpark  
-- SQL Analytics  
-- Delta Lake  
+## 📈 Enterprise Planning Layer (Fabric IQ Ready)
+
+The architecture is intentionally designed to support future enterprise planning capabilities.
+
+Although Microsoft Fabric Planning (Fabric IQ) is not implemented in this project, the platform is prepared to support:
+
+- Budgeting
+- Forecasting
+- Scenario Analysis
+- Executive Scorecards
+- AI-assisted Planning
+- Decision Intelligence
+
+This allows operational analytics, AI, and business planning to share the same trusted semantic foundation.
 
 ---
 
-### 🚀 DevOps
-- GitHub  
-- CI/CD pipelines  
-- Multi-environment deployments  
+## 🚀 Governance & DevOps Layer
+
+Enterprise control layer ensuring secure, governed, and repeatable deployments.
+
+Capabilities include:
+
+- Data Contracts
+- Data Quality
+- Data Observability
+- GitHub Integration
+- CI/CD Pipelines
+- Deployment Pipelines
+- DEV / TEST / PROD environments
 
 ---
 
-### 🔐 Governance
-- Data Contracts  
-- Data Quality Rules  
-- Observability Framework  
+# 🧰 4. Technology Stack
+
+## 🧱 Microsoft Fabric
+
+- OneLake
+- Lakehouse
+- Data Pipelines
+- Dataflow Gen2
+- Warehouse
+- Eventstream
+- KQL Database
+- Semantic Models
+- Power BI
+- Deployment Pipelines
 
 ---
 
-## 🧠 5. Design Principles
+## ☁️ Microsoft Azure
 
-This architecture follows:
-
-- **Data Mesh**: decentralized domain ownership  
-- **Medallion Architecture**: structured data refinement  
-- **Event-driven design**: real-time responsiveness  
-- **AI-native architecture**: intelligence embedded in data flows  
-- **Governed data platform**: trust and quality by design  
+- Azure Data Lake Storage Gen2
+- Azure OpenAI
 
 ---
 
-## 🎯 6. Outcome
+## 💻 Programming Languages
 
-This architecture enables:
+- Python
+- PySpark
+- SQL
 
-- Real-time operational intelligence  
-- Scalable enterprise analytics  
-- AI-powered decision systems  
-- Unified business metrics layer  
-- Governed and reliable data ecosystem  
+---
+
+## 🤖 Artificial Intelligence
+
+- Azure OpenAI
+- Fabric Data Agents
+- Retrieval-Augmented Generation (RAG)
+- Vector Search
+
+---
+
+## 🔐 Governance
+
+- Data Mesh
+- Data Contracts
+- Data Observability
+- Data Quality
+
+---
+
+## 🚀 DevOps
+
+- Git
+- GitHub
+- CI/CD
+- Deployment Pipelines
+
+---
+
+# 🏛️ 5. Enterprise Design Principles
+
+The architecture follows modern enterprise architecture principles:
+
+- Domain-Oriented Ownership (Data Mesh)
+- Data as a Product
+- Medallion Architecture
+- Lakehouse-first Design
+- Semantic-first Consumption
+- AI-ready Data Platform
+- Real-Time by Design
+- Governance by Default
+- Infrastructure & Analytics as Code
+- Enterprise Planning Ready
+
+---
+
+# 🎯 6. Expected Outcome
+
+The resulting architecture enables:
+
+- Trusted enterprise data products
+- Unified semantic models
+- Real-time operational intelligence
+- AI-powered enterprise assistants
+- Decision Intelligence
+- Enterprise Planning readiness
+- Governed self-service analytics
+- Scalable cloud-native architecture
+
+The platform demonstrates how Microsoft Fabric can unify data engineering, analytics engineering, real-time analytics, artificial intelligence, governance, DevOps, and enterprise planning within a single modern enterprise platform.
 
 ---
 

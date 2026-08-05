@@ -45,7 +45,7 @@ The Semantic Layer sits between:
 - 🤖 AI Agents Platform
 - ⚡ Real-Time Analytics Layer
 
-It is the **unification layer for all consumption systems**.
+It is the enterprise semantic foundation for all analytical and AI consumption layers.
 
 ---
 
@@ -129,7 +129,6 @@ The Semantic Layer consumes:
 
 - 🥇 Gold Layer (Data Platform)
 - ⚡ Real-Time Aggregates (KQL Views)
-- 🧠 AI-Enriched Data (RAG outputs)
 
 And serves:
 
@@ -156,7 +155,7 @@ AI agents rely on the Semantic Layer to ensure:
 
 - Consistent metric interpretation
 - Accurate business reasoning
-- Grounded responses
+- Business-grounded AI responses
 - KPI-aware decision making
 
 Example:
@@ -176,7 +175,7 @@ The Semantic Layer also integrates with real-time systems:
 
 This enables:
 
-> A unified view of batch + streaming + AI
+>A unified business view across historical, real-time, and AI-driven insights.
 
 ---
 
@@ -227,6 +226,6 @@ This layer ensures that:
 
 # 🔥 Result
 
-The Semantic Layer is the **final unification point of the data platform**
+The Semantic Layer is the enterprise business language of the data platform.
 
-> It transforms data into a trusted business language for the entire enterprise
+> It transforms trusted enterprise data into a governed business language used consistently across analytics, reporting, and AI.

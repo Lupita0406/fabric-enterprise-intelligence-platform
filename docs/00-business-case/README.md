@@ -1,5 +1,5 @@
 # 📄 00 - Business Case  
-## Enterprise Data & AI Platform on Microsoft Fabric
+## Enterprise Data, AI & Decision Intelligence Platform on Microsoft Fabric
 
 ---
 
@@ -69,19 +69,39 @@ Modern data-driven organizations typically face the following challenges:
 
 # 🎯 4. Objectives of the Platform
 
-This project aims to simulate a modern enterprise data platform that:
+This project aims to simulate a modern enterprise platform that unifies data, analytics, artificial intelligence, and decision intelligence within a single governed ecosystem.
 
-- Implements **Data Mesh principles** with domain-oriented ownership  
-- Applies **Medallion Architecture (Bronze / Silver / Gold layers)**  
-- Enables **real-time analytics using event-driven streaming**  
-- Provides a **semantic layer with certified business metrics**  
-- Integrates **AI agents powered by Azure OpenAI**  
-- Enforces **data contracts and governance rules**  
-- Implements **CI/CD pipelines for automated deployments**  
+The primary objectives are:
+
+- Implement **Data Mesh principles** with domain-oriented ownership and certified data products.
+- Apply the **Medallion Architecture (Bronze → Silver → Gold)** to progressively refine enterprise data.
+- Build a scalable **Lakehouse architecture** using Microsoft Fabric and OneLake.
+- Enable **real-time analytics** through event-driven streaming with Eventstream and KQL Database.
+- Provide a **semantic layer** with certified business metrics serving BI, AI Agents, APIs, and enterprise planning.
+- Integrate **AI-powered agents** using Azure OpenAI, Fabric Data Agents, and Retrieval-Augmented Generation (RAG).
+- Enforce **data contracts, observability, and governance** to improve data quality and trust.
+- Automate deployments through **GitHub integration, CI/CD pipelines, and Deployment Pipelines**.
+- Support **Decision Intelligence** by enabling trusted data for operational decisions, forecasting, and enterprise planning.
+- Design an extensible architecture prepared for future Microsoft Fabric capabilities, including **Fabric IQ**, **Enterprise Planning**, and **Agentic AI**. 
 
 ---
 
-# 🧪 5. Simulated Business Scenario
+# 🏆 5. Business Outcomes
+
+By implementing this platform, the organization is expected to achieve:
+
+- A unified and governed enterprise data foundation.
+- Consistent business metrics across all business domains.
+- Faster operational and strategic decision-making.
+- Real-time visibility into delivery operations.
+- Improved customer experience through AI-assisted interactions.
+- Increased confidence in enterprise data through governance and observability.
+- Reduced time-to-insight by automating data ingestion and transformation processes.
+- A scalable architecture capable of supporting analytics, AI, and enterprise planning on a single platform.
+
+---
+
+# 🧪 6. Simulated Business Scenario
 
 The platform is designed around a **Delivery & E-commerce ecosystem**.
 
@@ -108,7 +128,7 @@ The platform is designed around a **Delivery & E-commerce ecosystem**.
 
 ---
 
-# ⚡ 6. Example Use Case
+# ⚡ 7. Example Use Case
 
 ## Customer Query
 > “Why is my delivery delayed?”
@@ -131,7 +151,7 @@ The platform is designed around a **Delivery & E-commerce ecosystem**.
 
 ---
 
-# 🧠 7. Solution Capabilities
+# 🧠 8. Solution Capabilities
 
 ## Data & Analytics Foundation
 - End-to-end data pipeline architecture  
@@ -160,29 +180,32 @@ The platform is designed around a **Delivery & E-commerce ecosystem**.
 
 ---
 
-# 🏗️ 8. Strategic Value
+# 🏗️ 9. Strategic Value
 
 This architecture represents the evolution from traditional analytics systems to a modern:
 
-> **AI-native, real-time, domain-oriented data platform**
+> **AI-native, real-time, domain-oriented Decision Intelligence Platform**
 
-It enables enterprises to:
+It enables organizations to:
 
-- Break down data silos through Data Mesh principles  
-- React to business events in real time  
-- Standardize business metrics across the organization  
-- Embed AI into operational workflows  
-- Establish governed and trusted data foundations  
+- Break down data silos through Data Mesh principles.
+- React to business events in real time.
+- Standardize business metrics across the organization.
+- Enable enterprise planning and AI-assisted decision intelligence through trusted semantic models.
+- Embed AI into operational workflows.
+- Establish a governed and trusted data foundation.
 
-The result is a unified platform that supports:
+The result is a unified enterprise platform that supports:
 
-- Operational intelligence  
-- Analytical decision-making  
-- AI-driven automation  
+- Operational Intelligence
+- Business Analytics
+- Decision Intelligence
+- AI-driven Automation
+- Enterprise Planning
 
 ---
 
-# 📌 9. Target Audience
+# 📌 10. Target Audience
 
 This project is designed for:
 
@@ -194,7 +217,7 @@ This project is designed for:
 
 ---
 
-# 🧭 10. Expected Outcome
+# 🧭 11. Expected Outcome
 
 By implementing this platform, we demonstrate a production-grade reference architecture capable of:
 

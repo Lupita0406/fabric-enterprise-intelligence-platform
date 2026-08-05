@@ -1,0 +1,10 @@
+Domain,Dataset,Rows,Columns,File Size (MB),Format,Status
+Commerce,olist_order_items_dataset,112650,7,14.72,CSV,Ready
+Commerce,olist_order_payments_dataset,103886,5,5.51,CSV,Ready
+Commerce,olist_orders_dataset,99441,8,16.84,CSV,Ready
+Commerce,olist_products_dataset,32951,9,2.27,CSV,Ready
+Commerce,olist_sellers_dataset,3095,4,0.17,CSV,Ready
+Commerce,product_category_name_translation,71,2,0.0,CSV,Ready
+Custommer,olist_customers_dataset,99441,5,8.62,CSV,Ready
+Custommer,olist_order_reviews_dataset,99224,7,13.78,CSV,Ready
+Delivery,olist_geolocation_dataset,1000163,5,58.44,CSV,Ready
